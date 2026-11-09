@@ -15,6 +15,8 @@ const WHATSAPP_URL =
   encodeURIComponent(
     'Olá, Dra. Suélen! Vi o site e gostaria de agendar uma consulta.',
   );
+const REVIEWS_URL =
+  'https://www.google.com/maps/search/?api=1&query=Suelen%20Tochetto%20Dentista%20Erechim&query_place_id=ChIJCyVqEI4T45QRkzCDDv_7WKw';
 const INSTAGRAM_URL = 'https://www.instagram.com/dentista.suelentochetto/';
 
 const navLinks = [
@@ -639,6 +641,11 @@ function Reviews() {
         <p className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">
           no Google · 61 avaliações
         </p>
+        <div className="mt-8">
+          <ButtonLink href={REVIEWS_URL} variant="outline" external>
+            Ver avaliações no Google
+          </ButtonLink>
+        </div>
       </Reveal>
     </section>
   );
