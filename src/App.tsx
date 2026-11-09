@@ -24,7 +24,6 @@ const navLinks = [
 
 const images = {
   hero: '/images/01-retrato.jpg',
-  retrato: '/images/01-retrato.jpg',
   ambiente1: '/images/ambiente-clinica.webp',
   ambiente2: '/images/ambiente-sala.webp',
 };
@@ -296,16 +295,7 @@ function Aesthetic() {
   return (
     <section id="estetica" className="relative bg-blush/50 py-24 lg:py-36">
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-12">
-        <Reveal className="relative lg:col-span-5">
-          <img
-            src={images.ambiente1}
-            alt="Ambiente de atendimento do consultório"
-            loading="lazy"
-            className="aspect-[4/5] w-full rounded-lg object-cover shadow-soft"
-          />
-        </Reveal>
-
-        <Reveal className="lg:col-span-6 lg:col-start-7" delay={120}>
+        <Reveal className="lg:col-span-5">
           <p className="eyebrow">Estética</p>
           <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
             Realce sua beleza com <em className="text-primary italic">naturalidade.</em>
@@ -315,7 +305,15 @@ function Aesthetic() {
             detalhes e respeito às características individuais de cada pessoa.
           </p>
 
-          <div className="mt-10 space-y-6">
+          <div className="mt-8 hidden lg:block">
+            <ButtonLink href={WHATSAPP_URL} external>
+              Quero saber mais
+            </ButtonLink>
+          </div>
+        </Reveal>
+
+        <Reveal className="lg:col-span-6 lg:col-start-7" delay={120}>
+          <div className="space-y-6">
             {treatments.map(([title, desc]) => (
               <div
                 key={title}
@@ -327,7 +325,7 @@ function Aesthetic() {
             ))}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8 lg:hidden">
             <ButtonLink href={WHATSAPP_URL} external>
               Quero saber mais
             </ButtonLink>
@@ -489,17 +487,12 @@ function LocationAndGallery() {
     {
       src: images.ambiente2,
       alt: 'Sala de atendimento do consultório',
-      cls: 'sm:col-span-2 sm:row-span-2 aspect-[4/3] sm:aspect-auto',
+      cls: 'sm:col-span-2 aspect-[4/3]',
     },
     {
       src: images.ambiente1,
       alt: 'Detalhe do ambiente do consultório',
-      cls: 'aspect-[3/4]',
-    },
-    {
-      src: images.retrato,
-      alt: 'Dra. Suelen Tochetto no consultório',
-      cls: 'aspect-[3/4]',
+      cls: 'aspect-[3/4] sm:aspect-auto',
     },
   ];
 
@@ -529,7 +522,7 @@ function LocationAndGallery() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-3 sm:grid-rows-2">
+        <div className="mt-14 grid gap-5 sm:grid-cols-3">
           {galleryItems.map((item, idx) => (
             <button
               key={idx}
