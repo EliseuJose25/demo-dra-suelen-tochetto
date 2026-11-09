@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Suelen Tochetto - Cirurgiã-Dentista",
+  "description": "Cirurgia bucomaxilofacial, extração de sisos, harmonização labial, toxina botulínica e facetas com cuidado sem pressa. Atendimento em Erechim/RS e Curitiba/PR.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
