@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import {
   ArrowRight,
   ArrowUpRight,
@@ -117,6 +117,51 @@ function ButtonLink({
   );
 }
 
+// Logo em duas linhas: ajusta o espaçamento entre letras da linha de baixo
+// para que as duas linhas tenham exatamente a mesma largura.
+function Logo() {
+  const nameRef = useRef<HTMLSpanElement>(null);
+  const tagRef = useRef<HTMLSpanElement>(null);
+
+  useLayoutEffect(() => {
+    const fit = () => {
+      const name = nameRef.current;
+      const tag = tagRef.current;
+      if (!name || !tag) return;
+      tag.style.letterSpacing = '0px';
+      tag.style.marginRight = '0px';
+      const target = name.getBoundingClientRect().width;
+      const natural = tag.getBoundingClientRect().width;
+      const gaps = (tag.textContent?.length ?? 1) - 1;
+      const spacing = (target - natural) / gaps;
+      tag.style.letterSpacing = `${spacing}px`;
+      // o último caractere também recebe espaçamento; compensa para alinhar na ponta
+      tag.style.marginRight = `${-spacing}px`;
+    };
+    fit();
+    document.fonts?.ready.then(fit);
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, []);
+
+  return (
+    <a href="#inicio" className="inline-flex flex-col items-start leading-tight">
+      <span
+        ref={nameRef}
+        className="whitespace-nowrap font-display text-xl text-foreground"
+      >
+        Dra. Suelen Tochetto
+      </span>
+      <span
+        ref={tagRef}
+        className="mt-0.5 whitespace-nowrap text-[0.6rem] uppercase text-muted-foreground"
+      >
+        Odontologia &amp; Bucomaxilo
+      </span>
+    </a>
+  );
+}
+
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -141,14 +186,7 @@ function Header() {
           scrolled ? 'h-16' : 'h-20'
         }`}
       >
-        <a href="#inicio" className="leading-tight">
-          <span className="block font-display text-xl text-foreground">
-            Dra. Suelen Tochetto
-          </span>
-          <span className="block text-[0.6rem] uppercase tracking-[0.25em] text-muted-foreground">
-            Odontologia & Bucomaxilo
-          </span>
-        </a>
+        <Logo />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Principal">
           {navLinks.map(([label, href]) => (
