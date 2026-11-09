@@ -25,8 +25,8 @@ const navLinks = [
 const images = {
   hero: '/images/01-retrato.jpg',
   retrato: '/images/01-retrato.jpg',
-  ambiente1: '/images/ambiente-clinica.png',
-  ambiente2: '/images/ambiente-sala.png',
+  ambiente1: '/images/ambiente-clinica.webp',
+  ambiente2: '/images/ambiente-sala.webp',
 };
 
 function Reveal({
