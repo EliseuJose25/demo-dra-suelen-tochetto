@@ -196,7 +196,7 @@ function Hero() {
       id="inicio"
       className="relative overflow-hidden bg-gradient-to-b from-blush/60 to-background pt-28 lg:pt-32"
     >
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 lg:grid-cols-2 lg:gap-20 lg:pb-28">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-12 lg:grid-cols-2 lg:gap-14 lg:pb-16">
         <div className="animate-rise order-2 lg:order-1">
           <h1 className="text-5xl leading-[1.05] text-foreground sm:text-6xl xl:text-7xl font-display">
             Precisão de cirurgiã,{' '}
@@ -206,7 +206,7 @@ function Hero() {
             Um atendimento que une conhecimento, delicadeza e atenção às suas
             necessidades, respeitando seu tempo e suas escolhas.
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#cirurgia">Conhecer a Cirurgia</ButtonLink>
             <ButtonLink href="#estetica" variant="outline">
               Conhecer a Estética
@@ -240,11 +240,11 @@ function Surgery() {
   ];
 
   return (
-    <section id="cirurgia" className="relative py-24 lg:py-36">
-      <div className="relative mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-12">
+    <section id="cirurgia" className="relative py-12 lg:py-16">
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 lg:gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <p className="eyebrow">Cirurgia</p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl font-display">
             Cuidado e precisão em cada detalhe.
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
@@ -252,12 +252,12 @@ function Surgery() {
             necessidades de cada paciente. Você recebe orientações claras sobre
             cada etapa, com tranquilidade para compreender e decidir.
           </p>
-          <div className="mt-10 rounded-lg bg-primary p-8 text-primary-foreground shadow-soft">
+          <div className="mt-8 rounded-lg bg-primary p-8 text-primary-foreground shadow-soft">
             <p className="font-display text-3xl italic leading-snug">
               “Cada etapa explicada, no seu tempo.”
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-8">
             <ButtonLink href={WHATSAPP_URL} external>
               Agendar uma avaliação
             </ButtonLink>
@@ -293,14 +293,14 @@ function Aesthetic() {
   ];
 
   return (
-    <section id="estetica" className="relative bg-blush/50 py-24 lg:py-36">
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-12">
+    <section id="estetica" className="relative bg-blush/50 py-12 lg:py-16">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 lg:gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <p className="eyebrow">Estética</p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl font-display">
             Realce sua beleza com <em className="text-primary italic">naturalidade.</em>
           </h2>
-          <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
+          <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
             Procedimentos estéticos realizados com delicadeza, atenção aos
             detalhes e respeito às características individuais de cada pessoa.
           </p>
@@ -353,11 +353,11 @@ function Family() {
   ];
 
   return (
-    <section className="relative py-24 lg:py-36">
+    <section className="relative py-12 lg:py-16">
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Família</p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl font-display">
             Um cuidado completo, em todas as fases da vida.
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
@@ -366,7 +366,7 @@ function Family() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
+        <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3">
           {cards.map(([title, desc], idx) => (
             <Reveal key={title} delay={idx * 100} className="h-full">
               <div className="h-full bg-background p-10 transition-colors duration-300 hover:bg-muted">
@@ -396,11 +396,11 @@ function About() {
   ];
 
   return (
-    <section id="sobre" className="bg-graphite py-24 text-background lg:py-36">
-      <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+    <section id="sobre" className="bg-graphite py-12 text-background lg:py-16">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:gap-12 lg:grid-cols-2">
         <Reveal>
           <p className="eyebrow">Sobre o atendimento</p>
-          <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
+          <h2 className="mt-4 text-4xl leading-tight sm:text-5xl font-display">
             Mais do que cuidar do sorriso,{' '}
             <em className="text-blush italic">cuidar de quem confia em mim.</em>
           </h2>
@@ -431,16 +431,16 @@ function Hours() {
   ];
 
   return (
-    <section className="relative py-24 lg:py-36">
+    <section className="relative py-12 lg:py-16">
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
           <p className="eyebrow">Horários</p>
-          <h2 className="mt-5 max-w-2xl text-4xl leading-tight sm:text-5xl font-display">
+          <h2 className="mt-4 max-w-2xl text-4xl leading-tight sm:text-5xl font-display">
             Um horário que cabe na sua rotina.
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-12">
+        <div className="mt-10 grid gap-10 lg:grid-cols-12">
           <Reveal className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
             {schedule.map(([days, hours]) => (
               <div key={days} className="rounded-lg bg-blush/60 p-8">
@@ -508,12 +508,12 @@ function LocationAndGallery() {
   }, [activeImage]);
 
   return (
-    <section id="localizacao" className="bg-muted py-24 lg:py-36">
+    <section id="localizacao" className="bg-muted py-12 lg:py-16">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="eyebrow">Ambiente</p>
-            <h2 className="mt-5 max-w-xl text-4xl leading-tight sm:text-5xl font-display">
+            <h2 className="mt-4 max-w-xl text-4xl leading-tight sm:text-5xl font-display">
               Um ambiente preparado para receber você.
             </h2>
           </div>
@@ -522,7 +522,7 @@ function LocationAndGallery() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {galleryItems.map((item, idx) => (
             <button
               key={idx}
@@ -540,7 +540,7 @@ function LocationAndGallery() {
           ))}
         </div>
 
-        <Reveal className="mt-16 grid overflow-hidden rounded-lg border border-border bg-background lg:grid-cols-3">
+        <Reveal className="mt-10 grid overflow-hidden rounded-lg border border-border bg-background lg:grid-cols-3">
           <div className="p-10">
             <MapPin className="h-5 w-5 text-primary" />
             <h3 className="mt-6 text-2xl font-display">Como chegar</h3>
@@ -600,14 +600,14 @@ function LocationAndGallery() {
 
 function Reviews() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-12 lg:py-16">
       <Reveal className="relative mx-auto max-w-3xl px-6 text-center">
         <p className="eyebrow">Avaliações</p>
-        <h2 className="mt-5 text-4xl leading-tight sm:text-5xl font-display">
+        <h2 className="mt-4 text-4xl leading-tight sm:text-5xl font-display">
           A confiança de quem já passou por aqui.
         </h2>
         <div
-          className="mt-12 flex items-center justify-center gap-1.5"
+          className="mt-8 flex items-center justify-center gap-1.5"
           aria-label="5 de 5 estrelas"
         >
           {Array.from({ length: 5 }).map((_, i) => (
@@ -627,8 +627,8 @@ function Reviews() {
 
 function CtaBanner() {
   return (
-    <section className="px-6 pb-24">
-      <Reveal className="mx-auto max-w-7xl overflow-hidden rounded-lg bg-primary px-8 py-20 text-center text-primary-foreground sm:px-16 lg:py-28 shadow-soft">
+    <section className="px-6 pb-12 lg:pb-16">
+      <Reveal className="mx-auto max-w-7xl overflow-hidden rounded-lg bg-primary px-8 py-12 text-center text-primary-foreground sm:px-16 lg:py-16 shadow-soft">
         <h2 className="mx-auto max-w-3xl text-4xl leading-tight sm:text-6xl font-display">
           Seu cuidado começa com <em>uma conversa.</em>
         </h2>
@@ -636,7 +636,7 @@ function CtaBanner() {
           Será um prazer receber você, entender suas necessidades e orientar os
           próximos passos.
         </p>
-        <div className="mt-10">
+        <div className="mt-8">
           <ButtonLink href={WHATSAPP_URL} variant="light" external>
             Fale comigo pelo WhatsApp
           </ButtonLink>
