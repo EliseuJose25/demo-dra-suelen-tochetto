@@ -712,7 +712,7 @@ function Footer() {
         </div>
       </div>
 
-      <p className="border-t border-border py-6 text-center text-xs text-muted-foreground">
+      <p className="border-t border-border pb-28 pt-6 text-center text-xs text-muted-foreground md:py-6">
         © 2026 Dra. Suelen Tochetto. Todos os direitos reservados.
       </p>
     </footer>
