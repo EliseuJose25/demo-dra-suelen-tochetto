@@ -175,7 +175,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-7 z-50 transition-all duration-500 ${
         scrolled || menuOpen
           ? 'border-b border-border bg-background/95 backdrop-blur'
           : 'bg-transparent'
@@ -253,7 +253,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-gradient-to-b from-blush/60 to-background pt-28 lg:pt-32"
+      className="relative overflow-hidden bg-gradient-to-b from-blush/60 to-background pt-[8.75rem] lg:pt-[9.75rem]"
     >
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-12 lg:grid-cols-2 lg:gap-14 lg:pb-16">
         <div className="animate-rise order-2 lg:order-1">
@@ -767,6 +767,9 @@ function Footer() {
 export default function App() {
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary/20 selection:text-primary">
+      <div className="fixed inset-x-0 top-0 z-[55] flex h-7 items-center justify-center bg-graphite px-4 text-[0.68rem] uppercase tracking-[0.18em] text-background/80">
+        Prévia — conteúdo provisório
+      </div>
       <Header />
       <main>
         <Hero />
